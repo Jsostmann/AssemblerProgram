@@ -1,0 +1,24 @@
+* Example pointless assembler program for COMP360
+      laddr R8,cat
+      load  R1, dog[R8]
+      load  R2, goat[R8]
+more  add   R1, R2, R3
+      mult  R3, R2, R4
+      jn    R4, more
+      sub   R4, R1, R5
+      jz    R3, nodiv
+      div   R5, R3, R6
+nodiv store R6, addr
+      push  R6
+      call  mthd
+addr  spsw  R10
+      add   R10, R2, R7
+      lpsw  R7
+      jump  more
+*  example method
+mthd  add   R1, R2, R8
+      rtn
+*  data
+dog   data  1
+cat   data  0
+goat  data  2049
