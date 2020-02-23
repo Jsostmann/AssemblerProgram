@@ -221,6 +221,7 @@ public class Assembler {
                     tempInstruction.machineCode += "0";
                     break;
                 case 5:
+                    
                     for (int j = 0; j < 8 - tempInstruction.symbol.value.length(); j++) {
                         tempInstruction.machineCode += " ";
                     }
